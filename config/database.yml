@@ -21,7 +21,7 @@ development:
   database: whpostgres
   pool: 5
   username: postgres
-  password: Uber_men1
+  password: xxx
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
