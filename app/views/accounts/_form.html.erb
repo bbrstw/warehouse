@@ -1,0 +1,57 @@
+<%= form_for(@account) do |f| %>
+  <% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @account.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :user do |u| %>
+    <div class="field">
+      <%= u.label :first_name %><br />
+      <%= u.text_field :first_name, class: 'form-control' %><br />
+	</div>
+	<div class="field">
+      <%= u.label :last_name %><br />
+      <%= u.text_field :last_name, class: 'form-control' %><br />
+	</div>
+	<div class="field">
+      <%= u.label :email %><br />
+      <%= u.email_field :email, class: 'form-control' %><br />
+	</div>
+	<div class="field">
+      <%= u.label :password %><br />
+      <%= u.password_field :password, class: 'form-control' %><br />
+	</div>
+	<div class="field">
+      <%= u.label :password_confirmation %><br />
+      <%= u.password_field :password_confirmation, class: 'form-control' %><br />
+	</div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+  <%= f.label :subdomain %>
+  <div class="field input-group">
+    <%= f.text_field :subdomain, class: 'form-control' %>
+	<span class="input-group-addon">.cloudshelf.com</span>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary'%>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<div>
+<% if @user.first_name.present? || @user.last_name.present? %>
+  <h2><%= @user.first_name %> <%= @user.last_name %>
+<% else %>
+  <h2><%= @user.company %></h2>
+<% end %>
+
+<%= image_tag(@user.image.thumb.url)%>
+</div>

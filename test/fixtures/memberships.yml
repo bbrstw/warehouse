@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  whouse_id: 1
+  owner: false
+  manager: false
+
+two:
+  user_id: 1
+  whouse_id: 1
+  owner: false
+  manager: false

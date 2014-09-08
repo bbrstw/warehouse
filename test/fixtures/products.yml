@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_id: 1
+  name: MyText
+  description: MyText
+  sku: MyText
+  code: MyString
+  image: MyString
+  cost: 
+  cost: 
+  weight: 
+  weight: 
+  weight_unit: MyString
+  restock: 1
+  category_id: 1
+  supplier_id: 1
+  brand_id: 1
+
+two:
+  account_id: 1
+  name: MyText
+  description: MyText
+  sku: MyText
+  code: MyString
+  image: MyString
+  cost: 
+  cost: 
+  weight: 
+  weight: 
+  weight_unit: MyString
+  restock: 1
+  category_id: 1
+  supplier_id: 1
+  brand_id: 1

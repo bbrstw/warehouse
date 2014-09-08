@@ -1,0 +1,5 @@
+<% if @user.first_name.present? or @user.last_name.present? %>
+  Hello, <%= @user.first_name %> <% @user.last_name %>
+<% else %>
+  Hello, <%= @user.company %>
+<% end %>

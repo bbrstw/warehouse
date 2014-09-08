@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Warehouse</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag params[:controller] %>
+  <%= javascript_include_tag params[:controller] %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  
+</head>
+<body>
+	<% if user_signed_in? %>Logged in as <strong><%= current_user.email %></strong>.<% end %>
+	<div id="top-nav">
+		<ul class="nav nav-pills">
+			<% if user_signed_in? %>
+  		  		<li><%= link_to 'Account', edit_user_registration_path %></li>
+				<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+			<% else %>
+  		  		<% if request.subdomain.blank? %>
+  					<li><%= link_to "Sign up", new_account_path %></li>
+  			  	<% else %>
+  					<li><%= link_to "Login", new_user_session_path %></li>
+  				<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	<%= yield %>
+
+</body>
+</html>

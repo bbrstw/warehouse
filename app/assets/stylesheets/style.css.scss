@@ -1,0 +1,91 @@
+$schemeBrown: #714b00;
+$schemeGreenDark: #8aa00f;
+$schemeGreenMed: #afcd05;
+$schemeGreenLight: #dfe790;
+$schemeBlue: #98d1ee;
+$schemeRed: #C00913;
+
+/* Basic HTML styles */
+body {
+	
+}
+a {
+	color: $schemeGreenMed;
+	text-decoration: none;
+	&:hover {
+		color: $schemeGreenDark;
+	}
+	&:visited {
+		color: $schemeGreenMed;
+	}
+	&:active {
+		color: $schemeGreenLight;
+	}
+}
+a.btn {
+	color: #FFF !important;	
+}
+h1 {
+	
+}
+h2 {
+	
+}
+h3 {
+	
+}
+h4 {
+	
+}
+h5 {
+	
+}
+h6 {
+	
+}
+
+/* Alerts and notices */
+.notice {
+	
+}
+.alert {
+	
+}
+
+/* Form controls */
+.btn {
+	background: $schemeGreenMed;
+	border: 1px solid;
+	color: #FFF;
+	&:hover {
+		background: $schemeGreenDark;
+	}
+}
+.btn-primary {
+	border-color: $schemeGreenDark;
+	&:hover {
+		border-color: $schemeGreenDark;
+	}
+}
+
+/* Bootstrap elements */
+.jumbotron {
+	background: $schemeBlue;
+	color: $schemeBrown;
+}
+.well {
+	h2 {
+		color: $schemeBrown;
+	}
+}
+.input-group-addon {
+	color: $schemeBrown;
+}
+
+/* Custom text styles */
+.text-red {
+	color: $schemeRed;
+}
+.text-brown {
+	color: $schemeBrown;
+}
